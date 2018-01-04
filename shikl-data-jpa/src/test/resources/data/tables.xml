@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <r_DICTIONARY dictId="1" dictValue="1" dictName="column1" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="2" dictValue="2" dictName="column2" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="3" dictValue="3" dictName="column3" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="4" dictValue="4" dictName="column4" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="5" dictValue="5" dictName="column6" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="6" dictValue="6" dictName="column6" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="7" dictValue="7" dictName="column7" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="8" dictValue="8" dictName="column8" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="9" dictValue="9" dictName="column9" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="10" dictValue="10" dictName="column10" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="11" dictValue="11" dictName="column11" dictGroup="g1" defaultValue="1" version="1" />
+    <r_DICTIONARY dictId="12" dictValue="12" dictName="column12" dictGroup="g1" defaultValue="1" version="1" />
+</dataset>

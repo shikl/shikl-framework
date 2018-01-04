@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="rplus">
+    <test name="core.test">
+        <classes>
+            <class
+                    name="cn.shikl.data.jpa.service.impl.IdGeneratorServiceImplTest"></class>
+            <class name="cn.shikl.data.jpa.service.impl.DictionaryServiceImplJpaTest"></class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <title>R+权限管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="stylesheet" href="resources/public/assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="resources/public/assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="resources/public/assets/plugins/uniform/css/uniform.default.css" />
+    <link rel="stylesheet" href="resources/public/assets/plugins/fuelux/css/tree-metronic.css" />
+    <link rel="stylesheet" href="resources/public/assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/style-metronic.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/style.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/style-responsive.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/themes/light.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/pages/login.css" />
+    <link rel="stylesheet" href="resources/public/assets/css/custom.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    
+    
+    
+    
+    <!--[if lt IE 9]> <script src="/assets/plugins/respond.min.js"></script><![endif]-->
+    <script src="resources/public/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>  
+    <script src="resources/public/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="resources/public/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript" ></script>
+    
+    <script type="text/javascript">
+    $(function(){
+      /* 配置项 */
+      var menuData = [
+        {text:'主页', href:'index.html'},
+        {
+          text:'用户管理', 
+          href:'index.html', 
+          children:[
+            {text:'用户列表', href:'index.html'},
+            {text:'创建用户', href:'index.html'}
+          ]
+        },
+        {text:'资源管理', href:'index.html'}
+      ];
+      
+      var wrapId = '#navbar';
+      
+      
+      
+      /* 页面脚本 */
+      function initMenu(data, wrapId){
+        var navbar = $(wrapId);
+      
+        $.each(data, function(index, item){
+          initItem(item, navbar);
+        });
+        
+        navbar.find('.dropdown-menu').dropdown();
+        
+        
+        function initItem(item, wrapper){
+          var li = $('<li/>');
+          var link = $('<a/>').attr('href', item.href).html(item.text);
+          
+          li.append(link);
+          wrapper.append(li);     
+          
+          if(item.children && item.children.length > 0){
+            link.attr({'data-toggle':'dropdown', 'data-hover':'dropdown', 'data-close-others':'true'}).addClass('dropdown-toggle');
+          
+            var downIcon = $('<i/>').addClass('fa fa-angle-down');
+            link.append(downIcon);
+            
+            subWrapper = $('<ul/>').addClass('dropdown-menu');
+            li.append(subWrapper);
+            
+            $.each(item.children, function(index, childItem){
+              initItem(childItem, subWrapper);
+            });
+          }
+        }
+      }
+      
+      initMenu(menuData, wrapId);
+    })
+    </script>  
+    
+    
+    
+    <div class="hor-menu hidden-sm hidden-xs">
+				<ul class="nav navbar-nav" id="navbar"></ul>
+    </div>
+
+  </body>
+</html>

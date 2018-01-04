@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>shikl-framework</artifactId>
+        <groupId>cn.shikl</groupId>
+        <version>1.0.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>shikl-web-support</artifactId>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <myplus.version>1.0-SNAPSHOT</myplus.version>
+        <commons-io.version>2.0.1</commons-io.version>
+        <commons-beanutils.version>1.9.2</commons-beanutils.version>
+        <shikl-shiro.version>1.2.2</shikl-shiro.version>
+        <shikl-core.version>1.0.0-RELEASE</shikl-core.version>
+        <shikl-web-support.version>1.0.0-RELEASE</shikl-web-support.version>
+        <shikl-utils.version>1.0.0-RELEASE</shikl-utils.version>
+        <shikl-redis.version>1.0.0-RELEASE</shikl-redis.version>
+        <shikl-jpa.version>1.0.0-RELEASE</shikl-jpa.version>
+        <shikl-jpa-api.version>1.0.0-RELEASE</shikl-jpa-api.version>
+        <shikl-mysql.version>5.1.39</shikl-mysql.version>
+    </properties>
+
+    <build>
+        <!--<finalName>shikl</finalName>-->
+        <!--<sourceDirectory>src/main/java</sourceDirectory>-->
+        <!--<outputDirectory>WebContent/WEB-INF/classes</outputDirectory>-->
+        <!--<defaultGoal>install</defaultGoal>-->
+        <!--<resources>-->
+        <!--<resource>-->
+        <!--<targetPath>/</targetPath>-->
+        <!--<directory>src/main/resources</directory>-->
+        <!--<filtering>true</filtering>-->
+        <!--</resource>-->
+        <!--</resources>-->
+        <plugins>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-surefire-plugin</artifactId>-->
+            <!--<version>2.13</version>-->
+            <!--<configuration>-->
+            <!--<skip>true</skip>-->
+            <!--<argLine>-Xmx512m</argLine>-->
+            <!--<parallel>true</parallel>-->
+            <!--<suiteXmlFiles>-->
+            <!--<suiteXmlFile>src/test/resources/testng.xml-->
+            <!--</suiteXmlFile>-->
+            <!--</suiteXmlFiles>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+
+            <!-- 将class文件打包成jar包.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>runtime</classifier>
+                            <!--<includes>-->
+                            <!--<include>cn/com/rexen/rplus/**/*.class</include>-->
+                            <!--<include>messages/*</include>-->
+                            <!--<include>themes/*</include>-->
+                            <!--</includes>-->
+                            <excludes>
+                                <exclude>**.properties</exclude>
+                                <exclude>**.xml</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.shikl</groupId>
+            <artifactId>shikl-core</artifactId>
+            <version>${shikl-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.shikl</groupId>
+            <artifactId>shikl-data-api</artifactId>
+            <version>${shikl-jpa-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <!--//TODO　自动编译生成的代码需要依赖这个包，以后改成maven编译的方式 -->
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-entitymanager</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.hibernate</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>hibernate-ehcache</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${hibernate.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash; Spring Managed Dependencies &ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-core</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-beans</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-context-support</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-context-support</artifactId>-->
+        <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-expression</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-orm</artifactId>-->
+        <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-tx</artifactId>-->
+        <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework.security</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-security-core</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring-security.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework.security</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-security-web</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring-security.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.springframework.security</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-security-config</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring-security.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+        <!--<dependency>-->
+        <!--<groupId>org.aspectj</groupId>-->
+        <!--<artifactId>aspectjweaver</artifactId>-->
+        <!--<version>${aspectj.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>org.aspectj</groupId>-->
+        <!--<artifactId>aspectjrt</artifactId>-->
+        <!--<version>${aspectj.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-lang</groupId>-->
+        <!--<artifactId>commons-lang</artifactId>-->
+        <!--<version>${commons-lang.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-io</groupId>-->
+        <!--<artifactId>commons-io</artifactId>-->
+        <!--<version>${commons-io.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-test</artifactId>-->
+        <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.testng</groupId>-->
+        <!--<artifactId>testng</artifactId>-->
+        <!--<version>${testng.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>commons-logging</groupId>-->
+        <!--<artifactId>commons-logging</artifactId>-->
+        <!--<version>${commons-logging.version}</version>-->
+        <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-beanutils</groupId>-->
+        <!--<artifactId>commons-beanutils</artifactId>-->
+        <!--<version>${commons-beanutils.version}</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>com.github.springtestdbunit</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>spring-test-dbunit</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${spring-test-dbunit}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash; 	<scope>test</scope> &ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.dbunit</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>dbunit</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>${dbunit.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash; 		<scope>test</scope> &ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba</groupId>-->
+        <!--<artifactId>druid</artifactId>-->
+        <!--<version>${druid.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.h2database</groupId>-->
+        <!--<artifactId>h2</artifactId>-->
+        <!--<version>1.4.191</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.postgresql</groupId>-->
+        <!--<artifactId>postgresql</artifactId>-->
+        <!--<version>9.4-1206-jdbc4</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.apache.shiro</groupId>-->
+        <!--<artifactId>shiro-ehcache</artifactId>-->
+        <!--<version>1.2.2</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.apache.shiro</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>shiro-quartz</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>1.2.2</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.apache.shiro</groupId>-->
+        <!--<artifactId>shiro-spring</artifactId>-->
+        <!--<version>1.2.2</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>cn.shikl</groupId>
+            <artifactId>shikl-cache-redis</artifactId>
+            <version>${shikl-redis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.3</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
