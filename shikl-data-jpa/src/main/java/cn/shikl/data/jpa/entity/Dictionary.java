@@ -1,15 +1,14 @@
 package cn.shikl.data.jpa.entity;
 
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
-
-import cn.shikl.utils.IDGeneratorUUID;
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
-import java.io.Serializable;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * 数据字典.

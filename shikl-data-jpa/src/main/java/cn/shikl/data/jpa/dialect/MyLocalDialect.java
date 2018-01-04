@@ -5,7 +5,7 @@ import org.hibernate.dialect.function.StandardSQLFunction;
 import org.hibernate.type.StandardBasicTypes;
 
 /**
- * Created by yangcm on 2017/6/30.
+ * Created by shikl on 2017/6/30.
  */
 public class MyLocalDialect extends MySQL57InnoDBDialect {
 

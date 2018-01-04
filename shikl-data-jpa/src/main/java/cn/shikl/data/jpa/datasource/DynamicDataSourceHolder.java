@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * 向线程设置和获取数据库标识符
- * Created by yangcm on 2017/2/28.
+ * Created by shikl on 2017/2/28.
  */
 public class DynamicDataSourceHolder {
 
