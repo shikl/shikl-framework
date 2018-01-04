@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * 网络相关工具
  *
- * @author 尹维隆
+ * @author shikl
  * @version 1.0 2016年12月22日
  */
 public final class NetworkUtil {

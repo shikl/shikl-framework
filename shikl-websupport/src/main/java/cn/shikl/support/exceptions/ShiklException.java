@@ -3,9 +3,9 @@ package cn.shikl.support.exceptions;
 import cn.shikl.support.constants.BusiTypeCode;
 
 /**
- * 慧海公共异常
+ * 公共异常
  *
- * @author yinweilong
+ * @author shikl
  * @version v1.0    2016/12/27.
  */
 public class ShiklException extends Exception {

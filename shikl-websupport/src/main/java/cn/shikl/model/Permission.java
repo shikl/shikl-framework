@@ -3,7 +3,7 @@ package cn.shikl.model;
 /**
  * 权限BO
  *
- * @author yinweilong
+ * @author shikl
  * @version v1.0    2016/12/29.
  */
 public class Permission {
