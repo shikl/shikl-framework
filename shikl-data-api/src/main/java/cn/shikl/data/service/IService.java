@@ -12,7 +12,7 @@ import java.util.List;
  * service接口.
  *
  * @param <T>
- * @author libo.
+ * @author shikl.
  * @version 1.0
  */
 public interface IService<T> {

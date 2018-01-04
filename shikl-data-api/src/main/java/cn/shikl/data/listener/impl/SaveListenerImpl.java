@@ -2,6 +2,7 @@ package cn.shikl.data.listener.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import cn.shikl.data.listener.SaveEventListener;
 
@@ -12,7 +13,8 @@ import cn.shikl.data.listener.SaveEventListener;
  *         date:2017-04-23
  * @version 1.0.0
  */
-//@Service
+@SuppressWarnings("rawtypes")
+@Service
 public class SaveListenerImpl implements SaveEventListener {
 
     /**

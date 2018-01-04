@@ -18,7 +18,7 @@ import cn.shikl.data.execption.ValidatorException;
  * 验证实体的类.jsr303验证validator.
  *
  * @param <T> 泛型参数.
- * @author libo.
+ * @author shikl.
  * @version 1.0
  */
 @Service(value = "validatorEntity")
