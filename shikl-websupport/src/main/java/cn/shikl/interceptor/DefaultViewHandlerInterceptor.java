@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * <p>@author : libo </p>
+ * <p>@author : shikl </p>
  *
  * @version 1.0.0
  */

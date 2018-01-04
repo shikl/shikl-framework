@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 缓存配置
  *
- * @author libo
+ * @author shikl
  * @date 2016-3-1
  */
 //@Service

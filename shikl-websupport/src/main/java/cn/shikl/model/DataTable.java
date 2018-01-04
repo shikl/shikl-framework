@@ -6,7 +6,7 @@ import java.util.List;
  * DataTable组件实体类
  *
  * @param <V>
- * @author libo .
+ * @author shikl .
  */
 public class DataTable<V> extends BaseVO {
 

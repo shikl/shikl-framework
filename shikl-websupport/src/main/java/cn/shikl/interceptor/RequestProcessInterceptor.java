@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 处理Request相关操作。
- * <p>@author : libo </p>
+ * <p>@author : shikl </p>
  * @version 1.0.0
  */
 

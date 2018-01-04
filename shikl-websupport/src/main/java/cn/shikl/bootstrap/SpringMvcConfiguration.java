@@ -41,7 +41,7 @@ import java.util.Locale;
 /**
  * Spring MVC 类配置文件.
  *
- * @author libo
+ * @author shikl
  * @version 1.0.0*/
 
 

@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by yangcm on 2017/3/23.
+ * Created by shikl on 2017/3/23.
  */
 public class HttpClientUtil {
 

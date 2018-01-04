@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 前端与后端通讯消息对象.
  *
- * @author libo.
+ * @author shikl.
  */
 public class Messages extends BaseVO {
 

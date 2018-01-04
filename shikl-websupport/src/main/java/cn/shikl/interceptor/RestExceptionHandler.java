@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.IOException;
 
 /**
- * Created by yangcm on 2017/1/23.
+ * Created by shikl on 2017/1/23.
  */
 @ControllerAdvice
 public class RestExceptionHandler {

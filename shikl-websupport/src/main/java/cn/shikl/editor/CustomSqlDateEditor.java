@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 /**
  * java.sql.Date类型转换器.
  *
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0.0
  */
 public class CustomSqlDateEditor extends PropertyEditorSupport {

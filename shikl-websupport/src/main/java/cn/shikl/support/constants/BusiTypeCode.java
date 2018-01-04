@@ -1,7 +1,7 @@
 package cn.shikl.support.constants;
 
 /**
- * Created by yangcm on 2017/1/24.
+ * Created by shikl on 2017/1/24.
  */
 public enum  BusiTypeCode {
 

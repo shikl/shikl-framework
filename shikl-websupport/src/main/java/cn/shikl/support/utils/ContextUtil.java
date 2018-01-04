@@ -7,7 +7,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by yangcm on 2017/2/10.
+ * Created by shikl on 2017/2/10.
  */
 public class ContextUtil {
 

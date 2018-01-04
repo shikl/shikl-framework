@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 翻页包装.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 

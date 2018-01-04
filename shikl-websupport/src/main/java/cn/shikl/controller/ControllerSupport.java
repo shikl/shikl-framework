@@ -24,7 +24,7 @@ import java.util.Date;
 /**
  * 基础Controller类.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 public class ControllerSupport extends AbstractController {

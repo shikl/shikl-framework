@@ -1,7 +1,7 @@
 package cn.shikl.support.constants;
 
 /**
- * Created by yangcm on 2017/1/23.
+ * Created by shikl on 2017/1/23.
  */
 public enum  ExceptionCode {
 

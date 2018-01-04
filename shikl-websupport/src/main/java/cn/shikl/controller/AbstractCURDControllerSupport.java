@@ -20,7 +20,7 @@ import java.util.Map;
  * 增删改查基础Controller.
  *
  * @param <T> 泛型支持.
- * @author libo.
+ * @author shikl.
  * @version 1.0.0
  */
 public abstract class AbstractCURDControllerSupport<T extends Serializable, V extends BaseVO> extends ControllerSupport {
