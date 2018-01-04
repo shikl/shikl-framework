@@ -10,7 +10,7 @@ import java.util.Date;
  * 编号生成服务接口.
  * </p>
  *
- * @author libo.
+ * @author shikl.
  */
 public interface IdGeneratorService extends IService<IdGenerator> {
 

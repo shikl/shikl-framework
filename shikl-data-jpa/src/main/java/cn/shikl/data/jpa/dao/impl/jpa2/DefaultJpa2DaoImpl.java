@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * 默认的JPA2dao实现类.
  *
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0.0
  */
 @Repository(value = "basedao")

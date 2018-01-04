@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-23
  * @version 1.0.0
  */

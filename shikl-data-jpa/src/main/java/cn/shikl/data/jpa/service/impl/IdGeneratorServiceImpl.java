@@ -43,7 +43,7 @@ import java.util.Date;
  * }
  * </pre>
  *
- * @author libo
+ * @author shikl
  */
 @Service(value = IdGeneratorService.BEAN_NAME)
 @Transactional(readOnly = true)

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基本查询条件类.
  *
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-16
  * @version 1.0.0
  */

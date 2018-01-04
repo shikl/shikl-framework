@@ -1,6 +1,6 @@
 /**
  * 通用查询对象.
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-18
  * @version 1.0.0
  */

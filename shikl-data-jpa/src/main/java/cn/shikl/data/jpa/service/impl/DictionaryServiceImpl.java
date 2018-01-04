@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 字典服务实现类.
  *
- * @author libo
+ * @author shikl
  * @version 1.0
  */
 @Service(value = DictionaryService.BEAN_NAME)

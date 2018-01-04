@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * 数据配置类.
- * <p>@author : libo </p>
+ * <p>@author : shikl </p>
  *
  * @version 1.0.0
  */

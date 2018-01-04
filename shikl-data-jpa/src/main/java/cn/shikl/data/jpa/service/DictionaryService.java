@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 字典服务接口.
  *
- * @author libo
+ * @author shikl
  * @version 1.0
  */
 public interface DictionaryService extends IService<Dictionary> {

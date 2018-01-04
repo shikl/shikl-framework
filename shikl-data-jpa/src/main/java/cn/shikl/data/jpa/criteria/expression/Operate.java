@@ -3,7 +3,7 @@ package cn.shikl.data.jpa.criteria.expression;
 /**
  * 操作符类型.
  * 
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-16
  * @version 1.0.0
  */

@@ -10,7 +10,7 @@ import java.util.List;
  * 默认的jpa实现.
  *
  * @param <T> 泛型参数.
- * @author libo.
+ * @author shikl.
  * @version 1.0
  */
 public abstract class AbstractJpa2Dao<T> {

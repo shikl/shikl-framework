@@ -11,7 +11,7 @@ import cn.shikl.utils.StringUtils;
 /**
  * 两个条件指定不同的关系进行组合. AND OR .
  *
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-16
  * @version 1.0.0
  */

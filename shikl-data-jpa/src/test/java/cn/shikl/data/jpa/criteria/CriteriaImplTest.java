@@ -9,7 +9,7 @@ import cn.shikl.data.jpa.entity.Dictionary;
 import org.junit.Test;
 
 /**
- * @author libo <br/>
+ * @author shikl <br/>
  *         date:2014-04-16
  * @version 1.0.0
  */

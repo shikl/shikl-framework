@@ -6,7 +6,7 @@ import cn.shikl.data.criteria.Projection;
 /**
  * count投影.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 public class CountProjection implements Projection {

@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * 程序选项.
  * 
- * @author libo
+ * @author shikl
  */
 @Entity
 @Table(name = "r_options")

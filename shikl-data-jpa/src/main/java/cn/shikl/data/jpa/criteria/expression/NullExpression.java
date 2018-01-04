@@ -10,7 +10,7 @@ import cn.shikl.utils.StringUtils;
 /**
  * 空值条件.
  * 
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0.0
  */
 public class NullExpression implements Criterion {

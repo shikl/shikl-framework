@@ -13,7 +13,7 @@ import cn.shikl.data.jpa.config.PersistenceJPA2Configuration;
 
 /**
  * Data-Jpa 测试时启动基础类.
- * <p>@author : libo </p>
+ * <p>@author : shikl </p>
  *
  * @version 1.0.0
  */

@@ -15,7 +15,7 @@ import java.sql.SQLException;
 /**
  * 测试基类.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 @ContextConfiguration(classes = {MyPlusDataTest.class})

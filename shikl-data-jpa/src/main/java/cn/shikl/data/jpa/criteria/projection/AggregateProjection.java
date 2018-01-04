@@ -6,7 +6,7 @@ import cn.shikl.data.criteria.Projection;
 /**
  * 投影拼写.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 public class AggregateProjection implements Projection {

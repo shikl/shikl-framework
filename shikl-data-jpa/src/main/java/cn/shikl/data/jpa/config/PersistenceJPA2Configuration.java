@@ -34,7 +34,7 @@ import java.util.Properties;
 /**
  * JPA配置启动类.从配置文件中加载相关配置，并启动JPA容器.
  *
- * @author libo
+ * @author shikl
  * @version 1.0
  */
 @Configuration

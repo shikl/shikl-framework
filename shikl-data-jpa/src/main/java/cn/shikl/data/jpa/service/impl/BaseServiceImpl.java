@@ -27,7 +27,7 @@ import java.util.List;
  * 自定义service可以继承此类.
  *
  * @param <T> 泛型参数.
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 @Transactional(readOnly = true)

@@ -6,7 +6,7 @@ import cn.shikl.data.service.IService;
 /**
  * 应用程序选项服务接口.
  * 
- * @author libo
+ * @author shikl
  * 
  */
 public interface OptionsService extends IService<Options> {

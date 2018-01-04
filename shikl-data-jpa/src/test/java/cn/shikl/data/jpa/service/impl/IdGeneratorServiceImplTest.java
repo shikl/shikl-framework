@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 /**
  * 主键生成service测试.
  *
- * @author libo .
+ * @author shikl .
  */
 public class IdGeneratorServiceImplTest extends MyPlusTestNGTest {
 

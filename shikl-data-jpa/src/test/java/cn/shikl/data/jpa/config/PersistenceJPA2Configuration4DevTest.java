@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * <p>@author : libo </p>
+ * <p>@author : shikl </p>
  *
  * @version 1.0.0
  */

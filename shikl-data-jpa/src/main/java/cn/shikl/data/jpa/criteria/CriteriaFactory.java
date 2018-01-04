@@ -7,7 +7,7 @@ import cn.shikl.data.criteria.Criteria;
 /**
  * 查询条件生成工厂类.
  * 
- * @author libo
+ * @author shikl
  * @version 2.0
  */
 

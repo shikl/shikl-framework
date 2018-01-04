@@ -11,7 +11,7 @@ import cn.shikl.utils.StringUtils;
 /**
  * 区间查询条件.
  * 
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0.0
  */
 public class BetweenExpression extends BaseExpression implements Criterion {

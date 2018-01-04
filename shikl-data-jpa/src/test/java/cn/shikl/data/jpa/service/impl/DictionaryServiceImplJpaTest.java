@@ -21,7 +21,7 @@ import java.util.List;
  * jpa方式实现.
  * 增删改查.
  *
- * @author libo .
+ * @author shikl .
  */
 public class DictionaryServiceImplJpaTest extends MyPlusTestNGTest {
 

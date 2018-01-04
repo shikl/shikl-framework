@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 查询条件基础类.实现所有查询条件的公共方法.
  *
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0
  */
 public abstract class BaseExpression {

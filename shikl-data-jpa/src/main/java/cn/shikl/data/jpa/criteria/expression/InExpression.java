@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 包含查询方式.
  *
- * @author libo .
+ * @author shikl .
  * @version 1.0
  */
 public class InExpression extends BaseExpression implements Criterion {

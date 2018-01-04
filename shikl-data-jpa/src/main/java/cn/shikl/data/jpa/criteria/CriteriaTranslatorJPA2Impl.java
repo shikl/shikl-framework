@@ -7,7 +7,7 @@ import cn.shikl.data.jpa.criteria.expression.BetweenExpression;
 /**
  * JPA 参数类型处理类.
  * 
- * @author libo <br/>
+ * @author shikl <br/>
  * @version 1.0
  */
 public class CriteriaTranslatorJPA2Impl implements CriteriaTranslator {

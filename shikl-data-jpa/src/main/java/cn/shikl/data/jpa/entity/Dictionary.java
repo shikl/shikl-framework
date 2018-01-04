@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * 数据字典.
  *
- * @author libo
+ * @author shikl
  * @version 1.0
  */
 @Table(name = "r_dictionary")
