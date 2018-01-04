@@ -9,7 +9,7 @@ import cn.shikl.data.criteria.Projection;
 /**
  * 投影设置类.
  * 
- * @author zhanghai
+ * @author shikl
  * 
  */
 public final class Projections {

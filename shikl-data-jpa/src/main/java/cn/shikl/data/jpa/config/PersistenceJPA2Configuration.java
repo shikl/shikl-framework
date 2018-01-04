@@ -1,13 +1,13 @@
 package cn.shikl.data.jpa.config;
 
-import cn.shikl.data.jpa.datasource.DynamicDataSource;
-import cn.shikl.data.jpa.datasource.DynamicDataSourceHolder;
-import cn.shikl.data.jpa.transaction.MyJpaTransactionManager;
-import cn.shikl.utils.StringUtils;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.annotation.Resource;
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
@@ -24,12 +24,12 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManagerFactory;
-import javax.sql.DataSource;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import com.alibaba.druid.pool.DruidDataSource;
+
+import cn.shikl.data.jpa.datasource.DynamicDataSource;
+import cn.shikl.data.jpa.datasource.DynamicDataSourceHolder;
+import cn.shikl.data.jpa.transaction.MyJpaTransactionManager;
+import cn.shikl.utils.StringUtils;
 
 /**
  * JPA配置启动类.从配置文件中加载相关配置，并启动JPA容器.
@@ -45,7 +45,7 @@ public class PersistenceJPA2Configuration {
     /**
      * logger.
      */
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+//    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Resource
     private DataConfigure dataConfigure;
@@ -56,13 +56,16 @@ public class PersistenceJPA2Configuration {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource());
+        DataSource dataSource = dataSource();
+        em.setDataSource(dataSource);
         em.setPackagesToScan(dataConfigure.getEntityScanPackages());
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(additionalProperties());
 //        em.afterPropertiesSet();
         //TODO 引入hibernate.propreties
+        
+//        dataSourceInitializer(dataSource);
         return em;
     }
 
@@ -86,7 +89,7 @@ public class PersistenceJPA2Configuration {
             DynamicDataSourceHolder.setMasterNum(masterDataNode);
             DynamicDataSourceHolder.setSlaveNum(slaveDataNode);
 
-            Map targetDataSources = new HashMap();
+            Map<Object,Object> targetDataSources = new HashMap<Object,Object>();
             for(int i = 0; i < masterDataNode; i++){
                 String perfix = "master" + i ;
                 DruidDataSource dataSource = new DruidDataSource();
@@ -154,7 +157,6 @@ public class PersistenceJPA2Configuration {
         if (StringUtils.isNotEmpty(maxWait)) {
             dataSource.setMaxWait(Long.valueOf(maxWait));
         }
-
         //mysql
         dataSource.setPoolPreparedStatements(false);
     }
@@ -175,6 +177,11 @@ public class PersistenceJPA2Configuration {
         return properties;
     }
 
+    /*
+     *	数据源初始化 
+     * @param dataSource
+     * @return
+     */
     //    @Bean
     public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();

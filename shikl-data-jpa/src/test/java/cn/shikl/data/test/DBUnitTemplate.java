@@ -20,7 +20,7 @@ import java.sql.SQLException;
 /**
  * dbunit连接类.
  * 
- * @author zhanghai
+ * @author shikl
  * @version v1.0 2014-3-21
  */
 @Service

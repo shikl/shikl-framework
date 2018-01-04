@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 /**
  * 自定义的字典dao实现.
  * 
- * @author zhanghai.
+ * @author shikl.
  * 
  */
 @Repository

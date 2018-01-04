@@ -30,7 +30,7 @@ public interface DataConfigure {
     String SHOW_SQL = "hibernate.show_sql";
 
     String FORMAT_SQL = "hibernate.format_sql";
-
+    
     /**
      * 连接池配置.
      *

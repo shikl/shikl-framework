@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 字典表测试类.
  *
- * @author zhanghai .
+ * @author shikl .
  */
 public class DictionaryServiceImplTest extends MyPlusTestNGTest {
 

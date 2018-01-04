@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 快速生成查询条件.
  *
- * @author zhanghai .
+ * @author shikl .
  */
 public class Restrictions {
 

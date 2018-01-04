@@ -116,7 +116,8 @@ public class CriteriaJPA2Impl implements Criteria {
      *
      * @param clazz 实体类class.
      */
-    public CriteriaJPA2Impl(Class clazz) {
+    @SuppressWarnings("rawtypes")
+	public CriteriaJPA2Impl(Class clazz) {
         this.entityClass = clazz;
         this.entityName = getEntityName(clazz);
     }
@@ -132,7 +133,8 @@ public class CriteriaJPA2Impl implements Criteria {
      * @param type 实体类class.
      * @return String.
      */
-    private String getEntityName(Class type) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	private String getEntityName(Class type) {
         Entity entity = (Entity) type.getAnnotation(Entity.class);
         if (entity == null || entity.name() == null || entity.name().length() == 0) {
             entityName = type.getSimpleName();
